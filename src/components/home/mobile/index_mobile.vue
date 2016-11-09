@@ -7,11 +7,12 @@
 <template>
   <div>
      <h1 >home mobile!</h1>
-     <button @click="showToast()">Toast</button>
+     <button @click="showToast()" class="btn">Toast</button>
   </div>
 
 </template>
-<style>
+<style lang="scss">
+  @import './index.scss';
 </style>
 
 <script>

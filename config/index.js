@@ -21,7 +21,12 @@ module.exports = {
     port: 7000,
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      '/ffcloud-evipManager/*': {
+        target: 'http://123.56.242.250:6789',
+        secure: false
+      }
+    },
     // CSS Sourcemaps off by default because relative paths are "buggy"
     // with this option, according to the CSS-Loader README
     // (https://github.com/webpack/css-loader#sourcemaps)

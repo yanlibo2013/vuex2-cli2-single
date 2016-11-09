@@ -22,10 +22,17 @@ export const getDevicetype = ({ commit }) => {
 
 export const getList = ({ commit }) => {
 
-  ajax({
+  /*ajax({
     url: '/qm/api/banner/list',
     success: (result)=>{
       commit(types.GET_LIST,{result:result.list})
+    }
+  })*/
+
+  ajax({
+    url:'/ffcloud-evipManager/queryEpharVipCard',
+    success: (result)=>{
+      console.log(result);
     }
   })
 };

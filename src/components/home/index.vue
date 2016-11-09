@@ -19,10 +19,16 @@
     components: {mobile,pc},
     mounted () {
       //console.log(this.$store.state.common.device);
+
     },
     computed: mapGetters({
       device: 'getDeviceStatus'
-    })
+    }),
+    created () {
+      this.$store.dispatch('getList')
+    }
+
+
   }
 </script>
 
